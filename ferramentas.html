@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="gl-ES">
+<head>
+	<title>Ferramentas</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="estilo17_18.css">
+	<script src="conversor.js" async></script>
+	<script src="dado.js" async></script>
+	<script src="rot13.js" async></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h1 class="col-3">Ferramentas</h1>
+			<nav class="navbar col-12 col-sm-9">
+				<ul>
+					<li><a href="./">Inicio</a></li>
+					<li><a href="ferramentas.html">Ferramentas</a></li>
+					<li><a href="impresoras_3d.html">Impresoras 3D</a></li>
+					<li><a href="index16_17.html">Páxina antiga</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="row">
+			<div class="col-3">
+				<img src="imaxes/logo.svg">
+			</div>
+			<div class="col-12 col-sm-9">
+				<div class="row">
+					<h2 class="col-12">Conversor de temperaturas</h2>
+					<form class="col-12">
+						<div class="form-group"><label>Celsius: </label><input type="text" id="celsius" class="form-control"></div>
+						<div class="form-group"><label>Fahrenheit: </label><input type="text" id="fahrenheit" class="form-control"></div>
+						<div class="form-group"><label>Kelvin: </label><input type="text" id="kelvin" class="form-control"></div>
+					</form>
+					<p class="col-12">Escribe unha temperatura no espacio correspondente para convertila a outra escala.</p>
+					<noscript class="col-12">Este conversor de temperaturas require Javascript</noscript>
+				</div>
+				<div class="row">
+					<h2 class="col-12">Dado</h2>
+					<form class="col-12">
+						<span id="dice_result">-</span> <button type="button" id="roll">Tirar</button>
+					</form>
+					<p class="col-12">Pulsa para sacar un número ao azar entre 1 e 6.</p>
+				</div>
+				<div class="row">
+					<h2 class="col-12">Codificador ROT13</h2>
+					<form class="col-12">
+						<div class="form-group"><label>Texto orixinal: </label><input type="text" id="rot13_in" class="form-control"></div>
+						<div class="form-group"><label>Texto (des)codificado: </label><input type="text" id="rot13_out" class="form-control" readonly></div>
+					</form>
+					<noscript class="col-12">Isto require Javascript</noscript>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

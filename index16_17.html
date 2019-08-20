@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html><head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<title>Hola mundo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<ul class="navbar">
+<li><a href="/">Inicio</a></li>
+<li><a href="premios.html">Premios</a></li>
+<li><a href="exercicios.html">Exercicios</a></li>
+<li><a href="dni.html">Letra DNI</a></li>
+</ul>
+<main>
+<img class="blink" width="320" height="294" style="float: right;" alt="" src="imaxes/portada.png">
+<h1>Hola mundo</h1>
+<h2>Título 2</h2>
+<h3>Título 3</h3>
+<button onclick="start_blink()">Iniciar parpadeo</button>
+<button onclick="stop_blink()">Parar parpadeo</button>
+<br clear="both">
+</main>
+<footer>Alejandro González Santos | 1º Bach. B</footer>
+<script>
+"use strict"
+var blinkElements = document.getElementsByClassName('blink')
+function blink(state) {
+	for(var i = 0; i < blinkElements.length; i++) {
+		if(state) {
+			blinkElements[i].style.opacity = 1
+		}
+		else{
+			blinkElements[i].style.opacity = 0
+		}
+		
+	}
+}
+var currentState = true;
+var blink_interval = undefined;
+function start_blink() {
+	if(blink_interval) {
+		return;
+	}
+    blink_interval = setInterval(function(){
+	    currentState = !currentState;
+	    blink(currentState);
+    }, 500);
+}
+function stop_blink() {
+	if(!blink_interval) {
+		return;
+	}
+	if(!currentState) {
+		blink(true);
+	}
+	clearInterval(blink_interval);
+	blink_interval = undefined;
+}
+</script>
+</body></html>

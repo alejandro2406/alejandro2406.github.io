@@ -1,0 +1,50 @@
+body {
+	font-family: sans-serif;
+	color: #111;
+	background: #eee;
+	margin: 1cm;
+}
+
+img::after {
+	content: "Imagen";
+}
+
+.navbar {
+	margin-bottom: 16px;
+}
+.navbar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.navbar ul li {
+	background: #ccc;
+	margin: 2px;
+}
+
+@media(min-width:576px){
+	.navbar ul {
+		display: flex;
+	}
+	.navbar ul li {
+		float: left;
+		max-width: 150px;
+		flex-basis: 100%;
+	}
+}
+
+.navbar ul li a {
+	display: block;
+	padding: 5px;
+}
+
+#dice_result {
+	border: 3px #01e solid;
+	margin: 8px;
+	text-align: center;
+	width: 2em;
+	display:inline-block;
+}
